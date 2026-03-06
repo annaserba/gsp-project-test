@@ -1,0 +1,512 @@
+{
+  "meta": {
+    "title": "Название",
+    "reportDate": "2024-03-01",
+    "generatedAt": "2026-03-08T18:50:00+03:00",
+    "currency": "RUB",
+    "viewer": {
+      "id": "user-1",
+      "name": "Евгений Соловьев",
+      "role": "manager"
+    }
+  },
+  "filters": {
+    "date": {
+      "value": "2024-03-01",
+      "min": "2024-01-01",
+      "max": "2024-12-31"
+    },
+    "groupBy": {
+      "value": "all",
+      "options": [
+        {
+          "value": "all",
+          "label": "Фильтры"
+        },
+        {
+          "value": "company",
+          "label": "По компаниям"
+        },
+        {
+          "value": "project",
+          "label": "По проектам"
+        }
+      ]
+    }
+  },
+  "summaryCards": [
+    {
+      "id": "onSite",
+      "label": "На объекте",
+      "value": 8500,
+      "unit": "people",
+      "delta": -10,
+      "deltaUnit": "percent",
+      "tone": "warning"
+    },
+    {
+      "id": "deficit",
+      "label": "Дефицит",
+      "value": 3500,
+      "unit": "people",
+      "delta": -20,
+      "deltaUnit": "percent",
+      "tone": "critical"
+    },
+    {
+      "id": "required",
+      "label": "Потребность",
+      "value": 12000,
+      "unit": "people",
+      "tone": "neutral"
+    },
+    {
+      "id": "limits",
+      "label": "Лимиты",
+      "value": 11000,
+      "unit": "people",
+      "hint": "92% от потребности",
+      "tone": "neutral"
+    },
+    {
+      "id": "attendanceRate",
+      "label": "Коэффициент явки",
+      "value": 52,
+      "unit": "percent",
+      "hint": "99% явки от числ. на объекте",
+      "tone": "positive"
+    },
+    {
+      "id": "notAssigned",
+      "label": "Не задейств. в производстве",
+      "value": 15000,
+      "unit": "people",
+      "tone": "warning"
+    },
+    {
+      "id": "listedHeadcount",
+      "label": "Списочная численость",
+      "value": 30000,
+      "unit": "people",
+      "tone": "neutral"
+    }
+  ],
+  "companyStaffing": {
+    "title": "По компаниям, чел.",
+    "legend": [
+      {
+        "key": "intershiftRest",
+        "label": "Межвахта",
+        "color": "#7db7ff"
+      },
+      {
+        "key": "atFacilityNotWorking",
+        "label": "На объекте, но...",
+        "color": "#68c7b8"
+      },
+      {
+        "key": "inTransit",
+        "label": "В пути",
+        "color": "#f4c86a"
+      },
+      {
+        "key": "outsourced",
+        "label": "Передан на ау...",
+        "color": "#d29b63"
+      },
+      {
+        "key": "other",
+        "label": "Прочее",
+        "color": "#b7b7b7"
+      }
+    ],
+    "rows": [
+      {
+        "id": "gsp-1",
+        "label": "ГСП-1",
+        "fact": 5500,
+        "target": 6000,
+        "coveragePercent": 92,
+        "segments": {
+          "intershiftRest": 400,
+          "atFacilityNotWorking": 3600,
+          "inTransit": 900,
+          "outsourced": 300,
+          "other": 300
+        }
+      },
+      {
+        "id": "gsp-2",
+        "label": "ГСП-2",
+        "fact": 5000,
+        "target": 5300,
+        "coveragePercent": 94,
+        "segments": {
+          "intershiftRest": 350,
+          "atFacilityNotWorking": 3200,
+          "inTransit": 700,
+          "outsourced": 350,
+          "other": 400
+        }
+      },
+      {
+        "id": "gsp-3",
+        "label": "ГСП-3",
+        "fact": 4700,
+        "target": 6200,
+        "coveragePercent": 76,
+        "segments": {
+          "intershiftRest": 300,
+          "atFacilityNotWorking": 2800,
+          "inTransit": 700,
+          "outsourced": 300,
+          "other": 600
+        }
+      },
+      {
+        "id": "gsp-5",
+        "label": "ГСП-5",
+        "fact": 4500,
+        "target": 5200,
+        "coveragePercent": 87,
+        "segments": {
+          "intershiftRest": 280,
+          "atFacilityNotWorking": 2600,
+          "inTransit": 700,
+          "outsourced": 250,
+          "other": 670
+        }
+      },
+      {
+        "id": "gsp-6",
+        "label": "ГСП-6",
+        "fact": 4000,
+        "target": 4000,
+        "coveragePercent": 100,
+        "segments": {
+          "intershiftRest": 200,
+          "atFacilityNotWorking": 2800,
+          "inTransit": 500,
+          "outsourced": 200,
+          "other": 300
+        }
+      }
+    ]
+  },
+  "projectStaffing": {
+    "title": "По проектам, чел.",
+    "legend": [
+      {
+        "key": "intershiftRest",
+        "label": "Межвахта",
+        "color": "#7db7ff"
+      },
+      {
+        "key": "atFacilityNotWorking",
+        "label": "На объекте, но...",
+        "color": "#68c7b8"
+      },
+      {
+        "key": "inTransit",
+        "label": "В пути",
+        "color": "#f4c86a"
+      },
+      {
+        "key": "outsourced",
+        "label": "Передан на ау...",
+        "color": "#d29b63"
+      },
+      {
+        "key": "other",
+        "label": "Прочее",
+        "color": "#b7b7b7"
+      }
+    ],
+    "rows": [
+      {
+        "id": "1001",
+        "label": "1001",
+        "fact": 5500,
+        "target": 5800,
+        "coveragePercent": 95,
+        "segments": {
+          "intershiftRest": 500,
+          "atFacilityNotWorking": 3500,
+          "inTransit": 800,
+          "outsourced": 250,
+          "other": 450
+        }
+      },
+      {
+        "id": "3525",
+        "label": "3525",
+        "fact": 5000,
+        "target": 5300,
+        "coveragePercent": 94,
+        "segments": {
+          "intershiftRest": 400,
+          "atFacilityNotWorking": 3100,
+          "inTransit": 750,
+          "outsourced": 250,
+          "other": 500
+        }
+      },
+      {
+        "id": "2233",
+        "label": "2233",
+        "fact": 4700,
+        "target": 6300,
+        "coveragePercent": 75,
+        "segments": {
+          "intershiftRest": 300,
+          "atFacilityNotWorking": 2600,
+          "inTransit": 700,
+          "outsourced": 300,
+          "other": 800
+        }
+      },
+      {
+        "id": "1999",
+        "label": "1999",
+        "fact": 4500,
+        "target": 4900,
+        "coveragePercent": 92,
+        "segments": {
+          "intershiftRest": 240,
+          "atFacilityNotWorking": 2900,
+          "inTransit": 550,
+          "outsourced": 200,
+          "other": 610
+        }
+      },
+      {
+        "id": "12121",
+        "label": "12121",
+        "fact": 4000,
+        "target": 4000,
+        "coveragePercent": 100,
+        "segments": {
+          "intershiftRest": 200,
+          "atFacilityNotWorking": 2900,
+          "inTransit": 450,
+          "outsourced": 150,
+          "other": 300
+        }
+      }
+    ]
+  },
+  "companyEfficiency": {
+    "title": "План-факт анализа экономической эффективности по компаниям, чел.",
+    "columns": [
+      {
+        "key": "name",
+        "label": "Компания",
+        "type": "text"
+      },
+      {
+        "key": "kpiV2",
+        "label": "КПЭ версия 2",
+        "type": "number"
+      },
+      {
+        "key": "kpiV3",
+        "label": "КПЭ версия 3",
+        "type": "number"
+      },
+      {
+        "key": "limit",
+        "label": "Лимиты",
+        "type": "number"
+      },
+      {
+        "key": "onSite",
+        "label": "На объекте",
+        "type": "number"
+      },
+      {
+        "key": "vsKpiV2",
+        "label": "На объекте % к КПЭ v2",
+        "type": "percent"
+      },
+      {
+        "key": "vsKpiV3",
+        "label": "На объекте % к КПЭ v3",
+        "type": "percent"
+      },
+      {
+        "key": "vsLimit",
+        "label": "На объекте % к лимитам",
+        "type": "percent"
+      }
+    ],
+    "rows": [
+      {
+        "id": "gsp-1",
+        "name": "ГСП-1",
+        "kpiV2": 10000,
+        "kpiV3": 9300,
+        "limit": 8500,
+        "onSite": 8000,
+        "vsKpiV2": 80,
+        "vsKpiV3": 86,
+        "vsLimit": 94,
+        "status": "warning"
+      },
+      {
+        "id": "gsp-2",
+        "name": "ГСП-2",
+        "kpiV2": 10000,
+        "kpiV3": 9000,
+        "limit": 8500,
+        "onSite": 8000,
+        "vsKpiV2": 80,
+        "vsKpiV3": 89,
+        "vsLimit": 94,
+        "status": "warning"
+      },
+      {
+        "id": "gsp-4",
+        "name": "ГСП-4",
+        "kpiV2": 10000,
+        "kpiV3": 9000,
+        "limit": 8500,
+        "onSite": 5200,
+        "vsKpiV2": 52,
+        "vsKpiV3": 58,
+        "vsLimit": 61,
+        "status": "critical"
+      },
+      {
+        "id": "gsp-5",
+        "name": "ГСП-5",
+        "kpiV2": 10000,
+        "kpiV3": 9000,
+        "limit": 8500,
+        "onSite": 7700,
+        "vsKpiV2": 77,
+        "vsKpiV3": 85,
+        "vsLimit": 91,
+        "status": "warning"
+      },
+      {
+        "id": "gsp-7",
+        "name": "ГСП-7",
+        "kpiV2": 10000,
+        "kpiV3": 9000,
+        "limit": 8500,
+        "onSite": 5700,
+        "vsKpiV2": 57,
+        "vsKpiV3": 63,
+        "vsLimit": 67,
+        "status": "critical"
+      }
+    ]
+  },
+  "projectEfficiency": {
+    "title": "План-факт анализа экономической эффективности по проектам, чел.",
+    "columns": [
+      {
+        "key": "name",
+        "label": "Проект",
+        "type": "text"
+      },
+      {
+        "key": "kpiV2",
+        "label": "КПЭ версия 2",
+        "type": "number"
+      },
+      {
+        "key": "kpiV3",
+        "label": "КПЭ версия 3",
+        "type": "number"
+      },
+      {
+        "key": "limit",
+        "label": "Лимиты",
+        "type": "number"
+      },
+      {
+        "key": "onSite",
+        "label": "На объекте",
+        "type": "number"
+      },
+      {
+        "key": "vsKpiV2",
+        "label": "На объекте % к КПЭ v2",
+        "type": "percent"
+      },
+      {
+        "key": "vsKpiV3",
+        "label": "На объекте % к КПЭ v3",
+        "type": "percent"
+      },
+      {
+        "key": "vsLimit",
+        "label": "На объекте % к лимитам",
+        "type": "percent"
+      }
+    ],
+    "rows": [
+      {
+        "id": "1001",
+        "name": "1001",
+        "kpiV2": 10000,
+        "kpiV3": 9300,
+        "limit": 8500,
+        "onSite": 8000,
+        "vsKpiV2": 95,
+        "vsKpiV3": 85,
+        "vsLimit": 89,
+        "status": "positive"
+      },
+      {
+        "id": "3525",
+        "name": "3525",
+        "kpiV2": 10000,
+        "kpiV3": 9000,
+        "limit": 8500,
+        "onSite": 8000,
+        "vsKpiV2": 93,
+        "vsKpiV3": 85,
+        "vsLimit": 89,
+        "status": "positive"
+      },
+      {
+        "id": "2233",
+        "name": "2233",
+        "kpiV2": 10000,
+        "kpiV3": 9300,
+        "limit": 8500,
+        "onSite": 8000,
+        "vsKpiV2": 95,
+        "vsKpiV3": 85,
+        "vsLimit": 89,
+        "status": "positive"
+      },
+      {
+        "id": "1999",
+        "name": "1999",
+        "kpiV2": 10000,
+        "kpiV3": 9300,
+        "limit": 8500,
+        "onSite": 9000,
+        "vsKpiV2": 101,
+        "vsKpiV3": 85,
+        "vsLimit": 89,
+        "status": "positive"
+      },
+      {
+        "id": "12121",
+        "name": "12121",
+        "kpiV2": 10000,
+        "kpiV3": 9000,
+        "limit": 8500,
+        "onSite": 8000,
+        "vsKpiV2": 57,
+        "vsKpiV3": 85,
+        "vsLimit": 89,
+        "status": "critical"
+      }
+    ]
+  }
+}
