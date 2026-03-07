@@ -1,0 +1,122 @@
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.summary-card {
+  min-height: 136px;
+  padding: 14px 16px 16px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid rgba(29, 35, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.summary-card__label {
+  max-width: 18ch;
+  color: #1f2328;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summary-card__status {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--neutral);
+  box-shadow: 0 0 0 5px rgba(182, 188, 196, 0.18);
+}
+
+.summary-card__status--critical {
+  background: var(--critical);
+  box-shadow: 0 0 0 5px rgba(217, 120, 104, 0.14);
+}
+
+.summary-card__info {
+  position: relative;
+}
+
+.summary-card__info-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  padding: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #a7a39d;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.summary-card__info-button--warning {
+  color: #a7a39d;
+}
+
+.summary-card__value {
+  font-size: clamp(2.05rem, 2.15vw, 2.45rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: #1f2732;
+}
+
+.summary-card__value--positive {
+  color: var(--positive);
+}
+
+.summary-card__hint {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.summary-card__hint-accent {
+  font-weight: 500;
+}
+
+.summary-card__hint-accent--positive {
+  color: var(--positive);
+}
+
+.summary-card__hint-accent--warning {
+  color: #b78813;
+}
+
+.summary-card__hint-accent--critical {
+  color: #b45c50;
+}
+
+@media (max-width: 640px) {
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+  }
+}
