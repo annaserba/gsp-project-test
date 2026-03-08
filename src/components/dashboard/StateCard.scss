@@ -1,0 +1,47 @@
+.state-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding: 16px 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(34, 41, 49, 0.05);
+  background: rgba(246, 245, 242, 0.94);
+  min-width: 0;
+}
+
+.state-card strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.state-card p {
+  margin: 12px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.state-card__pulse {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3792d4, #65c1e7);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.state-card--error {
+  background: rgba(255, 242, 240, 0.88);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.88);
+    opacity: 0.7;
+  }
+}
