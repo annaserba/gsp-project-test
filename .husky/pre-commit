@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Find bun in common locations
+if command -v bun >/dev/null 2>&1; then
+  bun run lint
+elif [ -f "$HOME/.bun/bin/bun" ]; then
+  "$HOME/.bun/bin/bun" run lint
+else
+  echo "Error: bun not found. Please install bun or add it to PATH."
+  exit 1
+fi

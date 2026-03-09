@@ -8,16 +8,14 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:ui": "node_modules/.bin/playwright.exe test tests/ui-smoke.spec.cjs --reporter=line",
+    "test:ui": "playwright test tests/ui-smoke.spec.cjs --reporter=line",
     "prepare": "husky"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
     "dayjs": "^1.11.19",
     "lucide-react": "^0.577.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "recharts": "^3.8.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
