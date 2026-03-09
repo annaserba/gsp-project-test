@@ -1,0 +1,248 @@
+.dashboard-controls {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.icon-button,
+.control-chip,
+.filter-cluster__main,
+.filter-cluster__action {
+  border: 1px solid var(--frame-border);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f0eeea;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon-button--primary {
+  background: linear-gradient(180deg, #3b93d5, #2574ae);
+  border-color: rgba(37, 116, 174, 0.3);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.control-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  font-size: 0.93rem;
+}
+
+.control-chip span {
+  color: var(--ink-soft);
+}
+
+.control-chip strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.control-chip-wrapper {
+  min-width: 252px;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.control-chip__label {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.control-chip__value-shell {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid rgba(33, 40, 48, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.control-chip__input {
+  min-width: 92px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  outline: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.filter-cluster {
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.filter-cluster__main,
+.filter-cluster__action {
+  min-height: 44px;
+}
+
+.filter-cluster__main {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border-radius: 12px 0 0 12px;
+  border-right: 0;
+  font: inherit;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.filter-cluster__main strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(43, 130, 200, 0.12);
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.filter-cluster__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(180deg, #3b93d5, #2574ae);
+  color: #fff;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.popover {
+  position: relative;
+}
+
+.popover__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 20;
+  min-width: 240px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  background: rgba(30, 35, 42, 0.95);
+  box-shadow: 0 18px 32px rgba(20, 27, 35, 0.16);
+}
+
+.popover__panel--tooltip {
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 220px;
+  padding: 12px 14px;
+}
+
+.popover__panel--filters {
+  padding: 14px;
+}
+
+.tooltip-card strong {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+}
+
+.tooltip-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.filter-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.filter-panel__section {
+  display: grid;
+  gap: 10px;
+}
+
+.filter-panel__section strong {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.filter-panel__options {
+  display: grid;
+  gap: 8px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.84rem;
+}
+
+.filter-option input {
+  accent-color: var(--accent);
+}
+
+.filter-panel__meta {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 900px) {
+  .dashboard-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .control-chip,
+  .filter-cluster {
+    width: 100%;
+  }
+
+  .filter-cluster__main {
+    flex: 1 1 auto;
+  }
+
+  .control-chip__input {
+    min-width: 0;
+    text-align: left;
+  }
+}
